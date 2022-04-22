@@ -1,0 +1,140 @@
+ObjMgrSqlObjLog	Execute	4	00000dab62626c96:0	2022-04-22 16:42:11	Begin: Execute SqlObj 'Internal Division' at 178293a0
+ObjMgrSqlLog	Detail	4	00000dab62626c96:0	2022-04-22 16:42:11	SELECT statement with ID: D41E4E38
+SELECT
+      T7.CONFLICT_ID,
+      T7.LAST_UPD,
+      T7.CREATED,
+      T7.LAST_UPD_BY,
+      T7.CREATED_BY,
+      T7.MODIFICATION_NUM,
+      T7.ROW_ID,
+      T8.X_ECOMMERCE_FLAG,
+      T13.X_NO_CALIFICAR_LEADS_FLG,
+      T2.ATTRIB_17,
+      T2.ATTRIB_09,
+      T2.ATTRIB_22,
+      T2.ATTRIB_03,
+      T2.ATTRIB_05,
+      T2.ATTRIB_13,
+      T8.ATTRIB_14,
+      T13.PR_BL_OU_ID,
+      T10.OU_NUM,
+      T13.TAX_IDEN_NUM,
+      T8.ATTRIB_48,
+      T8.ATTRIB_49,
+      T8.X_ATTRIB_88,
+      T8.ATTRIB_44,
+      T13.PR_SHIP_OU_ID,
+      T8.ATTRIB_43,
+      T8.X_ATTRIB_85,
+      T7.NAME,
+      T7.PARTY_TYPE_CD,
+      T13.PR_ADDR_ID,
+      T13.PRTNR_FLG,
+      T6.NAME,
+      T13.PAR_BU_ID,
+      T11.BU_FLG,
+      T13.PR_MGR_POSTN_ID,
+      T3.NAME,
+      T11.NAME,
+      T4.NAME,
+      T7.PAR_PARTY_ID,
+      T7.ROOT_PARTY_FLG,
+      T13.LOC,
+      T13.CMPT_FLG,
+      T13.DIVN_TYPE_CD,
+      T13.BASE_CURCY_CD,
+      T13.NAME,
+      T8.X_AUTO_VOUCHER,
+      T5.X_MODALIDAD_COBRANZA,
+      T5.X_MODALIDAD_FACT,
+      T13.X_UA_POSEE_CC,
+      T13.X_ANUALES_RENOVABLES,
+      T13.BU_ID,
+      T9.ZIPCODE,
+      T9.ADDR,
+      T9.CITY,
+      T12.PH_NUM,
+      T9.COUNTRY,
+      T9.PROVINCE,
+      T13.ROW_ID,
+      T13.PAR_ROW_ID,
+      T13.MODIFICATION_NUM,
+      T13.CREATED_BY,
+      T13.LAST_UPD_BY,
+      T13.CREATED,
+      T13.LAST_UPD,
+      T13.CONFLICT_ID,
+      T13.PAR_ROW_ID,
+      T8.ROW_ID,
+      T8.PAR_ROW_ID,
+      T8.MODIFICATION_NUM,
+      T8.CREATED_BY,
+      T8.LAST_UPD_BY,
+      T8.CREATED,
+      T8.LAST_UPD,
+      T8.CONFLICT_ID,
+      T8.PAR_ROW_ID,
+      T11.ROW_ID,
+      T11.PAR_ROW_ID,
+      T11.MODIFICATION_NUM,
+      T11.CREATED_BY,
+      T11.LAST_UPD_BY,
+      T11.CREATED,
+      T11.LAST_UPD,
+      T11.CONFLICT_ID,
+      T11.PAR_ROW_ID,
+      T12.ROW_ID,
+      T9.ROW_ID,
+      T1.ROW_ID,
+      T1.MODIFICATION_NUM,
+      T1.CREATED_BY,
+      T1.LAST_UPD_BY,
+      T1.CREATED,
+      T1.LAST_UPD,
+      T1.CONFLICT_ID,
+      T1.ASSET_ID,
+      T1.BU_ID,
+      T1.BU_ID,
+      T1.ASSET_ID,
+      :1
+   FROM 
+       SIEBEL.S_ASSET_BU T1,
+       SIEBEL.S_ORG_EXT_X T2,
+       SIEBEL.S_POSTN T3,
+       SIEBEL.S_ORG_EXT T4,
+       SIEBEL.S_ORG_EXT T5,
+       SIEBEL.S_ORG_EXT T6,
+       SIEBEL.S_PARTY T7,
+       SIEBEL.S_ORG_EXT_X T8,
+       SIEBEL.S_ADDR_PER T9,
+       SIEBEL.S_ORG_EXT T10,
+       SIEBEL.S_BU T11,
+       SIEBEL.S_CON_ADDR T12,
+       SIEBEL.S_ORG_EXT T13
+   WHERE 
+      T7.ROW_ID = T2.ROW_ID (+) AND
+      T13.PR_SHIP_OU_ID = T10.ROW_ID (+) AND
+      T13.PAR_BU_ID = T6.PAR_ROW_ID (+) AND
+      T7.PAR_PARTY_ID = T4.PAR_ROW_ID (+) AND
+      T13.PR_MGR_POSTN_ID = T3.PAR_ROW_ID (+) AND
+      T13.PR_BL_OU_ID = T5.PAR_ROW_ID (+) AND
+      T7.ROW_ID = T13.PAR_ROW_ID AND
+      T7.ROW_ID = T8.PAR_ROW_ID (+) AND
+      T7.ROW_ID = T11.PAR_ROW_ID (+) AND
+      T13.PR_ADDR_ID = T12.ADDR_PER_ID (+) AND T13.ROW_ID = T12.ACCNT_ID (+) AND
+      T13.PR_ADDR_ID = T9.ROW_ID (+) AND T1.BU_ID = T7.ROW_ID AND
+      (T13.INT_ORG_FLG = 'Y') AND
+      (T1.ASSET_ID = :2)
+   ORDER BY
+      T13.INT_ORG_FLG, T13.NAME
+ObjMgrSqlLog	Detail	4	00000dab62626c96:0	2022-04-22 16:42:11	Bind variable 1: FINSObjMgr_esn,sbl_srvr_01,39845950,SADMIN,00000dab62626c96:0,,Internal Division,UA FINS Health Individual Policy Applicants View
+ObjMgrSqlLog	Detail	4	00000dab62626c96:0	2022-04-22 16:42:11	Bind variable 2: 1-TPIUHN
+ObjMgrSqlLog	Detail	4	00000dab62626c96:0	2022-04-22 16:42:11	
+***** SQL Statement Prepare Time for SQL Cursor with ID D41E4E38: 0.000 seconds *****
+
+ObjMgrSqlLog	SqlTag	2	00000dab62626c96:0	2022-04-22 16:42:11	Begin: Execute SqlObj 'Internal Division' at 178293a0 with SqlTag=FINSObjMgr_esn,sbl_srvr_01,39845950,SADMIN,00000dab62626c96:0,,Internal Division,UA FINS Health Individual Policy Applicants View
+SQLParseAndExecute	Bind Vars	4	00000dab62626c96:0	2022-04-22 16:42:11	1: FINSObjMgr_esn,sbl_srvr_01,39845950,SADMIN,00000dab62626c96:0,,Internal Division,UA FINS Health Individual Policy Applicants View
+SQLParseAndExecute	Bind Vars	4	00000dab62626c96:0	2022-04-22 16:42:11	2: 1-TPIUHN
+ObjMgrSqlLog	Detail	4	00000dab62626c96:0	2022-04-22 16:42:12	
+***** SQL Statement Execute Time for SQL Cursor with ID D41E4E38: 0.442 seconds *****
