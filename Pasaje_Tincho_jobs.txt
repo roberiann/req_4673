@@ -1,0 +1,29 @@
+Martin A. Teper
+9:18 (hace 9 horas)
+para mí
+
+Hola Rober,
+
+El que ejecuta UA Reprocesar Comision WF dejalo pendiente. El resto activalos según el horario que indica el documento.
+
+Faltaría también que yo al final no lo puse en instructivo, crear el job de envio de liquidaciones a EBS
+
+En QA es el id = 1-CEX6DX5
+
+Search Specification
+
+[UA Estado] = LookupValue("UA_ESTADO_LIQUIDACION", "Pendiente Envio EBS")
+
+Workflow Process Name
+
+UA Liquidaciones Comisiones EBS WF
+
+Repetición = Cada 5 Min
+
+ 
+
+Avisame cualquier cosa
+
+ 
+
+Saludos!

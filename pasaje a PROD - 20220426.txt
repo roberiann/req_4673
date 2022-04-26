@@ -7,19 +7,17 @@
 5) Configuración de nuevos perfiles de comunicación 6417 Doc 2.docx   - CREAR
 6) Configuración de nuevo perfil de comunicación REQ 6417 .docx       - CREAR
 
-ORDEN DE TAREAS PASAJE 
+ORDEN DE TAREAS PASAJE (20hs)
 
-Servers Prod
-vmpasb42 sbl_srvr_01
-vmpasb43 sbl_srvr_05
-vmptsb52 sbl_srvr_02
-
-0) Pausar vmpasb42 a las 18hs–  menos el comp uafinsobjmgr_esn
+0) Pausar vmpasb42 a las 18hs–  
    
-1) A las 20hs apagar los EAI del vmpasb42 e Importo el IRR PROD 
+1) A las 20hs apagar los EAI del vmpasb42 y ejecuto el Import IRR PROD
+
 shutdown fast component EAIObjMgr_esn for server sbl_srvr_01
 shutdown fast component EAIObjMgr_enu for server sbl_srvr_01
 shutdown fast component EAIObjMgr_ptb for server sbl_srvr_01
+
+Debo hacer un resume al comp uafinsobjmgr_esn para poder importar
 
 2) Apagar 42
 
@@ -33,7 +31,7 @@ scshutdown
 start_server all
 scstartup
 
-4) Una vez que levante el 42. Pausar 43 y 52
+4) Una vez que levante el 42. Pausar 43 y 52     
 
 pause comp FINSeChannelObjMgr_enu for server sbl_srvr_05
 pause comp FINSeChannelObjMgr_esn for server sbl_srvr_05
@@ -66,8 +64,11 @@ shutdown fast component EAIObjMgr_enu for server sbl_srvr_02
 shutdown fast component EAIObjMgr_ptb for server sbl_srvr_02
 
 
-8) Paso los xml de paquetes y vacio caches
- 
+8) Paso los xml de los paquetes y vacio caches
+ 
+9) Apago y prendo 43 y 52
+
+10) Reinicio BIP
 
 ***************************************************************************
 
@@ -76,18 +77,18 @@ MIGRACION
 0) Subir el servicio del app interface en el server vmpasb42
 
 Conectarse al vmpasb42 con usuario siebel  
-Checkear si el proceso está corriendo - 
+Checkear si el proceso está corriendo -
 ps -fu siebel | grep /u01/app/siebel/ai
 
 Para levantar el aap nt correr -> acstartup
 
 *****************************
 
-Ingresar a la consola: 
+Ingresar a la consola:
 
 https://vmpasb42.ua.com.ar:8443/siebel/smc/login.html
 
-En caso de no ingresar: 
+En caso de no ingresar:
 Conectarse al vmpasb42 y ejecutar:
 
 sbl_cmd start ws
@@ -115,7 +116,7 @@ scp siebel@vmpasb42:/u01/app/siebel/migrations/PROD-20211216-watermark.txt .
 
 4) https://vmdtsb76.ua.com.ar:8443/siebel/smc/
 
-5) 
+5)
 Borrar y crear nueva config. Para borrar es la cajita debajo de Migration:
 
 6) Crear una nueva configuración. Click en + crearla con los siguientes parámetros y luego hacer click en Deploy:
@@ -132,7 +133,7 @@ Dev Migration
 https://vmdtsb76.ua.com.ar:8443/siebel/migration/index.html     (SADMIN)
 
 Nombre del ZIP Ej. PROD-20211216-export.zip. Elegir la versión a pasar 122.
- 
+ 
 8) Copiar el .zip en el server destino vmpasb42
 
 cd /u01/app/siebel/migrations
@@ -144,9 +145,8 @@ scp PROD-20210318-export_schema.zip siebel@vmpasb42:/u01/app/siebel/migrations
 
 9) Ejecutar el IRR Import
 Ingresar a https://vmpasb42.ua.com.ar/siebel/migration/login.html   SADMIN/SADMIN
- 
+ 
 ************************
-
 Post pasaje:
 1) UA_20220318_SB_6049_DB_01
 2) UA_20221803_LRM_6417_DB_01
