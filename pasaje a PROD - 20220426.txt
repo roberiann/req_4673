@@ -1,0 +1,158 @@
+﻿Pre pasaje:
+0) Armo carpeta en e:\AdmUA\repos\UAAdm\Administracion\2022\20220426-pasaje-prod - OK
+1) REQ_6048 - Creación Mensaje de Validación.docx - CREAR
+2) REQ_6049_Creación de Job.docx  - CREAR SIN ACTIVAR
+3) REQ_6048 - Views.docx          - CREAR    
+4) REQ_6050 - Views.docx          - CREAR
+5) Configuración de nuevos perfiles de comunicación 6417 Doc 2.docx   - CREAR
+6) Configuración de nuevo perfil de comunicación REQ 6417 .docx       - CREAR
+
+ORDEN DE TAREAS PASAJE 
+
+Servers Prod
+vmpasb42 sbl_srvr_01
+vmpasb43 sbl_srvr_05
+vmptsb52 sbl_srvr_02
+
+0) Pausar vmpasb42 a las 18hs–  menos el comp uafinsobjmgr_esn
+   
+1) A las 20hs apagar los EAI del vmpasb42 e Importo el IRR PROD 
+shutdown fast component EAIObjMgr_esn for server sbl_srvr_01
+shutdown fast component EAIObjMgr_enu for server sbl_srvr_01
+shutdown fast component EAIObjMgr_ptb for server sbl_srvr_01
+
+2) Apagar 42
+
+S
+. ./siebenv.sh
+stop_server all
+scshutdown
+
+3) Levantar 42
+
+start_server all
+scstartup
+
+4) Una vez que levante el 42. Pausar 43 y 52
+
+pause comp FINSeChannelObjMgr_enu for server sbl_srvr_05
+pause comp FINSeChannelObjMgr_esn for server sbl_srvr_05
+pause comp FINSeChannelObjMgr_ptb for server sbl_srvr_05
+pause comp uafinsobjmgr_enu for server sbl_srvr_05
+pause comp uafinsobjmgr_esn for server sbl_srvr_05
+pause comp uafinsobjmgr_ptb for server sbl_srvr_05
+pause comp FINSObjMgr_enu for server sbl_srvr_05
+pause comp FINSObjMgr_esn for server sbl_srvr_05
+pause comp FINSObjMgr_ptb for server sbl_srvr_05
+
+pause comp FINSeChannelObjMgr_enu for server sbl_srvr_02
+pause comp FINSeChannelObjMgr_esn for server sbl_srvr_02
+pause comp FINSeChannelObjMgr_ptb for server sbl_srvr_02
+pause comp uafinsobjmgr_enu for server sbl_srvr_02
+pause comp uafinsobjmgr_esn for server sbl_srvr_02
+pause comp uafinsobjmgr_ptb for server sbl_srvr_02
+pause comp FINSObjMgr_enu for server sbl_srvr_02
+pause comp FINSObjMgr_esn for server sbl_srvr_02
+pause comp FINSObjMgr_ptb for server sbl_srvr_02
+
+7) Apagar EAI en 43 y 52
+
+shutdown fast component EAIObjMgr_esn for server sbl_srvr_05
+shutdown fast component EAIObjMgr_enu for server sbl_srvr_05
+shutdown fast component EAIObjMgr_ptb for server sbl_srvr_05
+
+shutdown fast component EAIObjMgr_esn for server sbl_srvr_02
+shutdown fast component EAIObjMgr_enu for server sbl_srvr_02
+shutdown fast component EAIObjMgr_ptb for server sbl_srvr_02
+
+
+8) Paso los xml de paquetes y vacio caches
+ 
+
+***************************************************************************
+
+MIGRACION
+
+0) Subir el servicio del app interface en el server vmpasb42
+
+Conectarse al vmpasb42 con usuario siebel  
+Checkear si el proceso está corriendo - 
+ps -fu siebel | grep /u01/app/siebel/ai
+
+Para levantar el aap nt correr -> acstartup
+
+*****************************
+
+Ingresar a la consola: 
+
+https://vmpasb42.ua.com.ar:8443/siebel/smc/login.html
+
+En caso de no ingresar: 
+Conectarse al vmpasb42 y ejecutar:
+
+sbl_cmd start ws
+
+*****************
+
+Borrar y crear nueva config. Para borrar es la cajita debajo de Migration:
+
+vmpasb42.ua.com.ar:8443
+Migration_Prod_Profile
+Migration_PROD_1
+Migration Producción 1
+
+1) Ingresar a https://vmpasb42.ua.com.ar:8443/siebel/migration/login.html con SADMIN
+o a vmptsb52  (el finsechannel tiene que estar arriba)
+
+2) Obtener una marca de agua.  Ej. PROD-20211216-watermark.txt
+
+3) Copiarlo en Desa. vmdtsb76
+
+Ingresar a Desa siebel/oracle
+ 
+cd /u01/app/siebel/migrations
+scp siebel@vmpasb42:/u01/app/siebel/migrations/PROD-20211216-watermark.txt .
+
+4) https://vmdtsb76.ua.com.ar:8443/siebel/smc/
+
+5) 
+Borrar y crear nueva config. Para borrar es la cajita debajo de Migration:
+
+6) Crear una nueva configuración. Click en + crearla con los siguientes parámetros y luego hacer click en Deploy:
+
+
+vmdtsb76.ua.com.ar:8443
+Seleccionar: Stagging
+Migrations_Dev_Profile
+DEV
+Dev Migration
+
+7) Correr el IRR Export en Desa. Ingresar a
+
+https://vmdtsb76.ua.com.ar:8443/siebel/migration/index.html     (SADMIN)
+
+Nombre del ZIP Ej. PROD-20211216-export.zip. Elegir la versión a pasar 122.
+ 
+8) Copiar el .zip en el server destino vmpasb42
+
+cd /u01/app/siebel/migrations
+scp PROD-20211216-export.zip siebel@vmpasb42:/u01/app/siebel/migrations
+
+****
+Si es solo esquema:
+scp PROD-20210318-export_schema.zip siebel@vmpasb42:/u01/app/siebel/migrations
+
+9) Ejecutar el IRR Import
+Ingresar a https://vmpasb42.ua.com.ar/siebel/migration/login.html   SADMIN/SADMIN
+ 
+************************
+
+Post pasaje:
+1) UA_20220318_SB_6049_DB_01
+2) UA_20221803_LRM_6417_DB_01
+3) UA_20220321_RI_6048_DB_01
+4) UA_20220412_LRM_6417_DB_01
+5) Cambios en Templates de Mails REQ 6392.xlsx      - MODIFICAR
+
+Vacio caches:
+Datamap, lov, ws
