@@ -1,11 +1,23 @@
-
+﻿
 
 git push https://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@github.com/roberiann/req_4673.git
 
-En lugar de que quede así <?if:UALogoProductoCalc='Universal Assistance'?>
 
-Seria algo así <?if:(/ListaVoucherDigital/VoucherDigital/UALogoProductoCalc[1])='Universal Assistance'?>
 
- 
+<?if:(/ListOfBIPUAVoucherDigitalIO/UAVoucherDigitalBC/UALogoProductoCalc[1])='Universal Assistance'?>
+<?if:(/ListOfBIPUAVoucherDigitalIO/UAVoucherDigitalBC/UALogoProductoCalc)='Universal Assistance'?>
+<?if:(/ListaVoucherDigital/VoucherDigital/UALogoProductoCalc[1])='Universal Assistance'?>
+<?if:(/Listavoucherdigital/Voucherdigital/Ualogoproductocalc[1])='Universal Assistance'?>
+<?if:(/ListaVoucherDigital/VoucherDigital/UALogoProductoCalc)='Universal Assistance'?>
 
-Avisame si funciona
+
+UAVoucherDigitalPasajerosBC
+
+<?for-each:/ListOfBIPUAVoucherDigitalIO/UAVoucherDigitalBC/ListOfUAVoucherDigitalPasajerosBC/UAVoucherDigitalPasajerosBC?>
+
+\'UA Voucher Digital BC\'.Search = \"([Id] = \"\"" + sIdVoucher + "\"\")\" \'UA Voucher Digital Pasajeros BC\'.Search = \"\"
+
+<?if:(/ListOfBipUaFinsHealthIndividualPolicy-Vouchers/FinsHealthIndividualPolicy/UABillingAccount[1])='GRUPO 3 DE TURISMO Rosario'?>
+
+EngInv	EngInv	3	000005886246f9e1:0	2022-03-31 23:31:44	Se ha solicitado al motor de flujo de trabajo que realice el método 'RunProcess'.
+EngInv	Arg	4	000005886246f9e1:0	2022-03-31 23:31:44	Input: @0*0*13*0*0*0*13*Language Code3*ESN16*ReportOutputType3*PDF10*ReportName39*UA Impresion de Voucher por Solicitante16*ReportOutputLang3*ESN14*ReportSelected39*UA Impresion de Voucher por Solicitante11*ProcessName21*BIP Report Generation16*ReportCustomName36*Voucher por Solicitante - T0000334478*Bookmark118*'FINS Health Individual Policy'.Search = "([Id] = ""1-1L4KDCK"")" 'FINS Health Individual Policy Contacts'.Search = ""8*ViewMode3*All20*ReportOutputFileName36*Voucher por Solicitante - T00003344717*IntegrationObject45*BIP UA FINS Health Individual Policy-Vouchers11*BIPPassword10*UABIPFAXES9*BIPUserId10*UABIPFAXES
