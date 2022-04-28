@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><?Siebel-Property-Set EscapeNames="true"?><PropertySet
+ XSLTFileLocation="../XSLT/XML2CSV-Vouchers Brasil.xsl"
+ _XMLFileLocation="/u01/app/siebel/files/Vouchers_Brasil_270422.xml"
+></PropertySet
+>
