@@ -1,0 +1,39 @@
+SELECT 
+
+--P.NAME "Country Value",P.VAL  "Country Desc" ,E.NAME "State Value" ,C.NAME "City Value"
+
+Count(*) -- GRAL: QA: 39088 PROD:14218 CO: QA:1127 PROD:1021
+
+FROM    SIEBEL.S_LST_OF_VAL C,
+
+        SIEBEL.S_LST_OF_VAL E,
+
+        SIEBEL.S_LST_OF_VAL P
+
+WHERE 1=1
+
+AND E.ROW_ID (+) = C.PAR_ROW_ID
+
+AND P.ROW_ID(+) = E.PAR_ROW_ID
+
+AND C.TYPE = 'UA_CITY'
+
+AND E.TYPE = 'STATE_ABBREV'
+
+AND P.TYPE = 'COUNTRY'
+
+AND P.ACTIVE_FLG = 'Y'
+
+AND E.ACTIVE_FLG = 'Y'
+
+AND C.ACTIVE_FLG = 'Y'
+
+AND P.LANG_ID = 'ESN'
+
+AND E.LANG_ID = 'ESN'
+
+AND C.LANG_ID = 'ESN'
+
+ORDER BY P.NAME
+
+;
