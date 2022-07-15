@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a2983dc6-1d96-4127-8ff1-f8d01f3c7cdb" activeEnvironment="Default" name="INTEGRACIONES - Plan de Pagos - Confirmación GIRE" resourceRoot="" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="2e2a9c72-892e-4b44-af1d-e1d0681d50c7" wsaVersion="NONE" name="ConsultaPlanesPagoPort" type="wsdl" bindingName="{http://siebel.com/CustomUI}ConsultaPlanesPagoPort" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/karina.aguilera/Downloads/http___siebel.com_CustomUI_UA%20Voucher%20Planes%20Pago%20WS.WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\karina.aguilera\Downloads\http___siebel.com_CustomUI_UA%20Voucher%20Planes%20Pago%20WS.WSDL"><con:part><con:url>file:\C:\Users\karina.aguilera\Downloads\http___siebel.com_CustomUI_UA%20Voucher%20Planes%20Pago%20WS.WSDL</con:url><con:content><![CDATA[<definitions targetNamespace="http://siebel.com/CustomUI" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsdLocal1="http://www.siebel.com/xml/UA_Voucher_Planes_Pago_IO" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://siebel.com/CustomUI">
+  <types>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.siebel.com/xml/UA_Voucher_Planes_Pago_IO">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="ListOfUa_Voucher_Planes_Pago_Io" type="xsdLocal1:ListOfUa_Voucher_Planes_Pago_Io"/>
+      <xsd:complexType name="ListOfUa_Voucher_Planes_Pago_IoTopElmt">
+        <xsd:sequence>
+          <xsd:element name="ListOfUa_Voucher_Planes_Pago_Io" maxOccurs="1" minOccurs="1" type="xsdLocal1:ListOfUa_Voucher_Planes_Pago_Io"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOfUa_Voucher_Planes_Pago_Io">
+        <xsd:sequence>
+          <xsd:element name="UaVoucherBc" maxOccurs="unbounded" minOccurs="0" type="xsdLocal1:UaVoucherBc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UaVoucherBc">
+        <xsd:sequence>
+          <xsd:element name="VoucherId" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="ListOfInsPayPlan" maxOccurs="1" minOccurs="0" type="xsdLocal1:ListOfInsPayPlan"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOfInsPayPlan">
+        <xsd:sequence>
+          <xsd:element name="InsPayPlan" maxOccurs="unbounded" minOccurs="0" type="xsdLocal1:InsPayPlan"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InsPayPlan">
+        <xsd:sequence>
+          <xsd:element name="RowId" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="TipoTarjeta" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="NroTarjeta" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Estado" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://siebel.com/CustomUI">
+      <xsd:import namespace="http://www.siebel.com/xml/UA_Voucher_Planes_Pago_IO"/>
+      <xsd:element name="ConsultaPlanesPagoOper_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="xsdLocal1:ListOfUa_Voucher_Planes_Pago_Io"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ConsultaPlanesPagoOper_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string"/>
+            <xsd:element name="Error_spcMessage" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="ConsultaPlanesPagoOper_Input">
+    <part name="ConsultaPlanesPagoOper_Input" element="tns:ConsultaPlanesPagoOper_Input"/>
+  </message>
+  <message name="ConsultaPlanesPagoOper_Output">
+    <part name="ConsultaPlanesPagoOper_Output" element="tns:ConsultaPlanesPagoOper_Output"/>
+  </message>
+  <portType name="ConsultaPlanesPagoPort">
+    <operation name="ConsultaPlanesPagoOper">
+      <input message="tns:ConsultaPlanesPagoOper_Input"/>
+      <output message="tns:ConsultaPlanesPagoOper_Output"/>
+    </operation>
+  </portType>
+  <binding name="ConsultaPlanesPagoPort" type="tns:ConsultaPlanesPagoPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="ConsultaPlanesPagoOper">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:ConsultaPlanesPagoOper"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="UA_spcVoucher_spcPlanes_spcPago_spcWS">
+    <port binding="tns:ConsultaPlanesPagoPort" name="ConsultaPlanesPagoPort">
+      <soap:address location="http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint></con:endpoints><con:operation id="62d7be47-589f-4852-9a13-e52e8b15dbb5" isOneWay="false" action="document/http://siebel.com/CustomUI:ConsultaPlanesPagoOper" name="ConsultaPlanesPagoOper" bindingOperationName="ConsultaPlanesPagoOper" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c3cb0fb6-8fd4-4c4f-b68f-f360020d6548" name="Request Completo"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://siebel.com/CustomUI" xmlns:ua="http://www.siebel.com/xml/UA_Voucher_Planes_Pago_IO">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cus:ConsultaPlanesPagoOper_Input>\r
+         <ua:ListOfUa_Voucher_Planes_Pago_Io>\r
+            <!--Zero or more repetitions:-->\r
+            <ua:UaVoucherBc>\r
+               <!--Optional:-->\r
+               <ua:VoucherId>?</ua:VoucherId>\r
+               <!--Optional:-->\r
+               <ua:ListOfInsPayPlan>\r
+                  <!--Zero or more repetitions:-->\r
+                  <ua:InsPayPlan>\r
+                     <!--Optional:-->\r
+                     <ua:RowId>?</ua:RowId>\r
+                     <!--Optional:-->\r
+                     <ua:TipoTarjeta>?</ua:TipoTarjeta>\r
+                     <!--Optional:-->\r
+                     <ua:NroTarjeta>?</ua:NroTarjeta>\r
+                     <!--Optional:-->\r
+                     <ua:Estado>?</ua:Estado>\r
+                  </ua:InsPayPlan>\r
+               </ua:ListOfInsPayPlan>\r
+            </ua:UaVoucherBc>\r
+         </ua:ListOfUa_Voucher_Planes_Pago_Io>\r
+      </cus:ConsultaPlanesPagoOper_Input>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:ConsultaPlanesPagoOper"/><con:wsrmConfig version="1.2"/></con:call><con:call id="69b47c74-7678-4cab-9d48-a0749c9f0824" name="DESAIP20"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://vmdtsb76.ua.com.ar:8443/siebel/app/eai_anon/esn?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://siebel.com/CustomUI" xmlns:ua="http://www.siebel.com/xml/UA_Voucher_Planes_Pago_IO">\r
+<soapEnv:Header xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/">
+<wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/07/secext">
+http://schemas.xmlsoap.org/ws/2002/07/secext
+<wsse:UsernameToken xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility">
+<wsse:Username>SADMIN</wsse:Username>
+<wsse:Password Type="wsse:PasswordText">SADMIN</wsse:Password>
+</wsse:UsernameToken>
+</wsse:Security>
+</soapEnv:Header>
+   <soapenv:Body>\r
+      <cus:ConsultaPlanesPagoOper_Input>\r
+         <ua:ListOfUa_Voucher_Planes_Pago_Io>\r
+            <!--Zero or more repetitions:-->\r
+            <ua:UaVoucherBc>\r
+               <!--Optional:-->\r
+               <ua:VoucherId>T000055267</ua:VoucherId>\r
+               <!--Optional:-->\r
+               <ua:ListOfInsPayPlan>\r
+                  <!--Zero or more repetitions:-->\r
+                  <ua:InsPayPlan>\r
+                     <!--Optional:-->\r
+                     <ua:RowId>1-1V1T0NN</ua:RowId>\r
+                     <!--Optional:-->\r
+                     <ua:TipoTarjeta>VISA **** **** **** 3122</ua:TipoTarjeta>\r
+                     <!--Optional:-->\r
+                     <ua:NroTarjeta>4304979218153122</ua:NroTarjeta>\r
+                     <!--Optional:-->\r
+                     <ua:Estado>EXITOSA</ua:Estado>\r
+                  </ua:InsPayPlan>\r
+               </ua:ListOfInsPayPlan>\r
+            </ua:UaVoucherBc>\r
+         </ua:ListOfUa_Voucher_Planes_Pago_Io>\r
+      </cus:ConsultaPlanesPagoOper_Input>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:ConsultaPlanesPagoOper"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
