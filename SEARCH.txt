@@ -1,0 +1,1 @@
+[End Date] = Today()+ 60 AND [Status] = "Activo" AND ([Sub Status]<> "Renovado" or [Sub Status] is null) AND [UA Tipo Venta Voucher]="Anual con renov. automática" AND [UA Proceso de Renovacion Calc]="Y"
