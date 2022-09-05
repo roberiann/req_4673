@@ -127,13 +127,13 @@ http://schemas.xmlsoap.org/ws/2002/07/secext
             <!--Zero or more repetitions:-->\r
             <ua:UaVoucherBc>\r
                <!--Optional:-->\r
-               <ua:VoucherId>T000055269</ua:VoucherId>\r
+               <ua:VoucherId>T000055319</ua:VoucherId>\r
                <!--Optional:-->\r
                <ua:ListOfInsPayPlan>\r
                   <!--Zero or more repetitions:-->\r
                   <ua:InsPayPlan>\r
                      <!--Optional:-->\r
-                     <ua:RowId>1-1V1W4EH</ua:RowId>\r
+                     <ua:RowId>1-1V2P60M</ua:RowId>\r
                      <!--Optional:-->\r
                      <ua:TipoTarjeta>VISA **** **** **** 3122</ua:TipoTarjeta>\r
                      <!--Optional:-->\r
