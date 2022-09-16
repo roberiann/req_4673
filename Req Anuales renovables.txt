@@ -1,0 +1,9 @@
+select X_MSG_COMUNICACION_1, X_MSG_COMUNICACION_2, X_MSG_COMUNICACION_3
+from siebel.S_ASSET
+where row_id = '1-1V53OUW'
+
+
+En el ws: dev_riannuzzi_6580_renov_reglas 
+
+
+UA Proceso Renovacion WF
