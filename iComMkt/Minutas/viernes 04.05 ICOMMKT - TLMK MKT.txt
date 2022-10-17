@@ -1,0 +1,40 @@
+ASISTENTES
+diego baron
+mariela iglesias
+leonardo gonzalez
+nahuel ruiz
+erica hoffmann
+karina aguilera
+
+
+CAMPAÑAS DE MAIL
+
+RETAIL: no confian en el mail cargado
+COBERTURAS: no tienen dato de contacto de beneficiario
+QUITAR CORPORATIVOS Y DATOS DE RETAIL
+
+Envío de canal de venta en el beneficiario: 
+	TLMK y EZEIZA
+			todos los mostradores 
+			todo lo que es venta directa
+
+CARGA INICIAL: todo el historico de LEADS, BENEFICIARIOS y VOUCHERS
+LEAD:
+	todos los leads menos los duplicados
+		estado= Retirado
+		motivo de baja= Lead duplicado
+				Derivado (todos)
+				
+
+marca en el beneficiario que indica que tuvo un caso asistencial
+
+
+interfaz de actualizacion de beneficiarios para la desuscripcion
+
+
+agregar a Lucia en la capacitación Lunes 21/05 11:00 am
+
+armado de reporte custom que pueda reflejar las ventas telefonicas surgidas de una campaña en particular (se envia el mail, se convierte en voucher, y si esto sucede en un periodo determinado se lo considera producto de la campaña)
+
+
+ver con KAri el tema del requerimiento que sube el chat de atento y genera un nuevo lead interno en atento 
