@@ -1,0 +1,22 @@
+Jessica Alejandro (External Contractor)
+16:22 (hace 1 hora)
+para Maria, mí, Santiago, Martin, Inmaculada, Jonathan
+
+Hola Buenas tardes,
+
+    Te confirmo el nombre del WS que es necesario subir a main: "int_factory_6728_ja"
+
+Y adicional a esto la System Preference es
+Nombre:UA_EXP_REG_RUT_CHILE
+Valor de Preferencia del sistema: ^0*\d{7,8}([\dK])$
+
+Por ultimo realicé la prueba en el simulador de business service del WF y me generó correctamente los datos en la tabla (fuera de que si tarda bastante en ejecutarse y fue el motivo para moverlo a un job y tener una tabla temporal)
+
+Si no te llega a funcionar me gustaría poder ejecutar el WF en el simulador para ver si el tema está con algún objeto o por el llamado al web service
+
+Adicional a esto, podrias apoyarme a validar que la tabla esté creada?
+Nombre de la tabla: CX_INT_BANKINFO
+
+Cualquier duda o comentario me avisas
+
+Saludos
