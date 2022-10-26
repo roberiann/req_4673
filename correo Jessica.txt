@@ -20,3 +20,15 @@ Nombre de la tabla: CX_INT_BANKINFO
 Cualquier duda o comentario me avisas
 
 Saludos
+
+
+
+Jessica Alejandro (External Contractor)
+10:09 (hace 10 minutos)
+para Maria, mí, Santiago, Martin, Inmaculada, Jonathan, Sebastián
+
+Buen Día Roberto,
+
+Te comparto los valores correctos, una disculpa
+Nombre: UA_EXP_REG_BAN_CH
+Valor: ^[0-9]{4,20}$
