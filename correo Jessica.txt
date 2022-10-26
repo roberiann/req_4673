@@ -32,3 +32,9 @@ Buen Día Roberto,
 Te comparto los valores correctos, una disculpa
 Nombre: UA_EXP_REG_BAN_CH
 Valor: ^[0-9]{4,20}$
+
+
+   Podrías ayudarme a validar si está esta system Preference? Es la que hace el llamado al servicio web externo, revisé la documentación y veo que no estaban agregadas.
+
+Nombre: UA_URL_GET_BANK_INFO
+Valor: https://reintegros-qa.universal-assistance.com:8443/get-banks-info
