@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><?Siebel-Property-Set EscapeNames="true"?><Test_spcService
+ Service_spcName="Workflow Process Manager"
+ Method_spcName="RunProcess"
+ Iterations="1"
+></Test_spcService
+>

@@ -1,0 +1,15 @@
+
+
+
+if (prodBC.CountRecords() == 0 || prodBC.GetFieldValue("UA Precio unitario") == "" || prodBC.GetFieldValue("UA Precio unitario") == 0)
+        						TheApplication().RaiseErrorText(TheApplication().UALookupDVMMessage("UA_SCPRECIO_002"));//LS 04-05-2014 - Req 1211 - Traducción de Mensaje.
+
+"Debe agregar el producto de cobertura al voucher y completar el precio unitario antes de realizar el calculo de precio"								
+								
+						
+Si la modalidad del producto es Dias 
+         
+If ([UA Modalidad] = [UA Lookup Dias],[UA Precio Pactado]*[UA Dias calc], IIf([UA Modalidad] = [UA Lookup Monto],[UA Precio Pactado]*[UA Factor calc],[UA Factor calc] * [UA Importe de lista]))
+
+
+[UA Factor calc] * [UA Importe de lista] 
