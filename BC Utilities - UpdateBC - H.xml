@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><?Siebel-Property-Set EscapeNames="true"?><Test_spcService
- Service_spcName="UA BC Utilities BS"
- Method_spcName="UpdateBC"
- Iterations="1"
-></Test_spcService
->

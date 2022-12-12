@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><?Siebel-Property-Set EscapeNames="true"?><PropertySet
- UA_spcVersion_spcClase_spcId="1-9HGILYC"
- BCName="UA Producto Voucher BC"
- BOName="UA Voucher BO"
- SearchExpr="[Asset Id] = &apos;1-9H0VNEW&apos;"
-></PropertySet
->

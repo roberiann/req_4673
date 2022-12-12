@@ -1,0 +1,6 @@
+ObjMgrBusServiceLog	Create	4	0000053e6396aceb:0	2022-12-12 19:20:42	Business Service 'Siebel Execute Process Service' (address: 'c6affa28')was regsitered at model 'c6b977e8' for session ''
+ObjMgrBusServiceLog	InvokeMethod	4	0000053e6396aceb:0	2022-12-12 19:20:42	Begin: Business Service 'Siebel Execute Process Service' invoke method: 'WSDeliver' at c6affa28
+SecAdptLog	API Trace	4	0000053e6396aceb:0	2022-12-12 19:20:42	DB SecurityGetCredentials for user=SADMIN, pType=ServerDataSrc.
+GenericLog	GenericError	1	0000053e6396aceb:0	2022-12-12 19:20:42	Command: /u01/app/siebel/ses/siebsrvr/bin/siebdevcli /u SADMIN /p SADMIN /d "ServerDataSrc" /l ESN /c "/u01/app/siebel/ses/siebsrvr/bin/esn/swtools.cfg" /SpawnThreads /DeliverWorkspace int_factory_6718_hf "REQ 6718 - Mejoras vistas interfaz EBS (Cobranzas)" /pl "CRD=/u01/app/siebel/ses/siebsrvr;TempDir=/u01/app/siebel/ses/siebsrvr/temp;Docked=TRUE;CS=SICRMDEV;TO=SIEBEL;DLL=sscdo90;SqlStyle=OracleCBO;MaxCC=16;MaxCDS=16;RFT=100;CSQLID=SSEROLE;MaxCS=-1;PrefetchSize=-1;SymPrefix=X_;RepoName=Siebel Repository;"
+NameServerLayerLog	Info	3	0000053e6396aceb:0	2022-12-12 19:28:47	-952116416:  Export has started. Process ID# = 140.
+ObjMgrBusServiceLog	Error	1	0000053e6396aceb:0	2022-12-12 19:28:47	(execprocsvc.cpp (633)) SBL-DAT-60300: Deliver Workspace Failed. Refer to log for more information.

@@ -1,8 +1,0 @@
-En este caso lo que hago es lo siguiente:
-
-En la consulta SQL reemplazo por el número de voucher
-Obtengo el SearchExp ([Asset Id] = '1-D5RATDA') y Id de Version de Clase
-Ejecuto en el simulador de BS los xml adjuntos reemplazando SearchExp y campo UA Version Clase Id con los valores correspondientes.
-Verifico en el Applet que se haya cambiado el Número de versión de clase.
-
-Al voucher T013112995 hay que ponerle la versión 5 de la clase.
