@@ -1,0 +1,54 @@
+Buenas Tincho, 
+
+Te dejo todo por si llega a haber un pasaje a QA del req 6560 de anuales renovables. Nos faltaría saber quienes del equipo de la software factory crearon más objetos para este mismo req que aún no pasaron a QA.
+Esto porque yo te agrego algunos objetos que son las dvm y no cree yo, pero si modifiqué, y otros que yo no cree pero hay pasar con la dvm caso RTEs y Mensajes de val.
+Los mensajes de validacion los creo Henry -> [OIC_HFORERO 09082022]: Creado para REQ6560.
+
+El ws es dev_riannuzzi_6580_renov_reglas  (no presté atención que erré en el nombre el nro de req. y como ya tenía bastante hecho lo dejé así)
+
+Objetos: 
+Nueva LOV: UA_TIPO_MSG_RENOVACION 
+
+Nuevas vistas: UA Textos Renovacion View
+               UA Puestos de Trabajo Renovacion View      
+
+DVMS: 
+UA Validacion Org Emisora
+UA Validacion Canal Venta
+UA Validacion Generico
+UA Validacion Generico PAX
+UA Validacion Org Emisora PAX
+UA Validacion Canal Venta PAX
+UA Validacion Textos Condicionales (Las primeras 6 no las cree yo pero las modifiqué ya que no estaban funcionando, y lo marcó Santiago en la planilla como bug)
+
+Mensajes de validación:
+UA_VALIDA_ORG_EMISORA
+UA_VALIDA_CANAL_VENTA
+UA_VALIDA_GENERICO
+UA_VALIDA_PARAM_TIPO (Los primeros 3 no los cree yo)
+
+RTEs
+UA Validacion Generico PAX
+UA Validacion Canal Venta PAX
+UA Validacion Org Emisora PAX
+UA Validacion Canal Venta
+UA Validacion Org Emisora
+UA Validacion Generico
+UA Validacion Textos Condicionales (Los primeros 6 no los cree yo)
+
+Paquetes al momento: (quedan todos en borrador por si hay nuevas modificaciones)
+UA_20230203_RI_6560_DB_01 (RTE)
+UA_20230203_RI_6560_DB_02 (RTE) 
+UA_20230203_RI_6560_DB_03 (RTE)
+UA_20230203_RI_6560_DB_04 (RTE)
+UA_20230203_RI_6560_DB_05 (RTE)
+UA_20230203_RI_6560_DB_06 (RTE)
+UA_20230203_RI_6560_DB_07 (RTE)
+UA_20230203_RI_6560_DB_08 (LOV - Como la lov fue creada por los chicos en el ws dev, el tipo no existe en el MAIN y los valores están inactivos. Veremos si al subir el ws al MAIN genera el tipo)
+
+Quedó completo también el inventario.
+
+Saludos,
+Roberto
+
+
