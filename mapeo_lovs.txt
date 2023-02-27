@@ -1,0 +1,23 @@
+Tareas en Desarrollo:
+
+-> Generar script .sh de ejecución
+-> Generar tabla de validación con usuario UA_MIG 
+-> Generar package de validación de BD
+-> Generar mapping EIM
+-> Generar ifb
+-> Generar inserts/dataload para cargar de tabla de validación
+-> Documentación, crear paquete (Ver el filtro) con la LOV y pasar el xml a los demás ambientes.
+-> BAckup de la tabla
+- Prueba unitaria 1 o 2 insert, ejecución manual del job EIM.
+
+***************************
+
+Importación:
+
+1) Inserts a EIM_LST_OF_VAL
+2) Ejecutar manual el job
+3) Crear paquete (Fundamental ver el filtro) con la LOV y pasar el xml a los demás ambientes
+
+
+
+INSERT INTO SIEBEL.EIM_LST_OF_VAL (IF_ROW_BATCH_NUM, IF_ROW_STAT, ROW_ID, LOV_TYPE, LOV_VAL, LOV_NAME, LOV_LANG_ID, LOV_DESC_TEXT, PAR_LANG_ID, PAR_TYPE, PAR_SUB_TYPE, PAR_VAL, LOV_SUB_TYPE, LOV_ACTIVE_FLG,LOV_DFLT_LIC_FLG, LOV_MODIFIABLE_FLG, LOV_MORG_DSALW_FLG,LOV_MULTILINGUALFL, LOV_REQD_LIC_FLG, LOV_TRANSLATE_FLG, LOV_RPLCTN_LVL_CD, LOV_PAR_WS_ID)VALUES (100,'FOR IMPORT','EIM_1','UA_CITY','LA VICTORIA','LA VICTORIA','ESN','EIM-112021','ESN','STATE_ABBREV','CO','AMAZONAS CO','AMAZONAS CO','Y','N','N','N','N','N','N','All','1-84QE-3UP');
