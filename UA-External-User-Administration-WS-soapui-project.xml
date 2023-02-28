@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0eda37d9-44b2-47da-8f85-aa998131360e" activeEnvironment="Default" name="UA_External_User_Administration_WS" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="dabc84f9-fecc-4c00-86fd-d78d5e52e1f0" wsaVersion="NONE" name="GetChallengeQuestionPort" type="wsdl" bindingName="{http://siebel.com/CustomUI}GetChallengeQuestionPort" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/martin.teper/OneDrive%20-%20Universal%20Assistance%20S.A/Documentos/Soap/http___siebel.com_CustomUI_UA_External_User_Administration_WS.WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/martin.teper/OneDrive%20-%20Universal%20Assistance%20S.A/Documentos/Soap/http___siebel.com_CustomUI_UA_External_User_Administration_WS.WSDL"><con:part><con:url>file:/C:/Users/martin.teper/OneDrive%20-%20Universal%20Assistance%20S.A/Documentos/Soap/http___siebel.com_CustomUI_UA_External_User_Administration_WS.WSDL</con:url><con:content><![CDATA[<definitions targetNamespace="http://siebel.com/CustomUI" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsdLocal1="http://www.siebel.com/xml/UA%20Employee%20EAI%20IO" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsdLocal2="http://www.siebel.com/xml/UA%20Update%20Employee%20EAI%20IO" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://siebel.com/CustomUI">
+  <types>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://siebel.com/CustomUI">
+      <xsd:import namespace="http://www.siebel.com/xml/UA%20Update%20Employee%20EAI%20IO"/>
+      <xsd:import namespace="http://www.siebel.com/xml/UA%20Employee%20EAI%20IO"/>
+      <xsd:element name="GetChallengeQuestionOper_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="LoginName" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetChallengeQuestionOper_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string"/>
+            <xsd:element name="Error_spcMessage" type="xsd:string"/>
+            <xsd:element ref="xsdLocal1:ListOfUaEmployeeEaiIo"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateEmployeeOper_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="xsdLocal2:ListOfUaUpdateEmployeeEaiIo"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateEmployeeOper_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string"/>
+            <xsd:element name="Error_spcMessage" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendNewPasswordOper_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ChallengeQuestion" type="xsd:string"/>
+            <xsd:element name="LoginName" type="xsd:string"/>
+            <xsd:element name="Email" type="xsd:string"/>
+            <xsd:element name="ChallengeAnswer" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendNewPasswordOper_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string"/>
+            <xsd:element name="Error_spcMessage" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.siebel.com/xml/UA%20Update%20Employee%20EAI%20IO">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="ListOfUaUpdateEmployeeEaiIo" type="xsdLocal2:ListOfUaUpdateEmployeeEaiIo"/>
+      <xsd:complexType name="ListOfUaUpdateEmployeeEaiIoTopElmt">
+        <xsd:sequence>
+          <xsd:element name="ListOfUaUpdateEmployeeEaiIo" maxOccurs="1" minOccurs="1" type="xsdLocal2:ListOfUaUpdateEmployeeEaiIo"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOfUaUpdateEmployeeEaiIo">
+        <xsd:sequence>
+          <xsd:element name="Employee" maxOccurs="unbounded" minOccurs="0" type="xsdLocal2:Employee"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Employee">
+        <xsd:sequence>
+          <xsd:element name="EMailAddr" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="FirstName" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+          <xsd:element name="LastName" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+          <xsd:element name="LoginName" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Password" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UABirthDate" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UAChallengeAnswer" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UAChallengeQuestion" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UARecertificacionFlg" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="NewPassword" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.siebel.com/xml/UA%20Employee%20EAI%20IO">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="ListOfUaEmployeeEaiIo" type="xsdLocal1:ListOfUaEmployeeEaiIo"/>
+      <xsd:complexType name="ListOfUaEmployeeEaiIoTopElmt">
+        <xsd:sequence>
+          <xsd:element name="ListOfUaEmployeeEaiIo" maxOccurs="1" minOccurs="1" type="xsdLocal1:ListOfUaEmployeeEaiIo"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOfUaEmployeeEaiIo">
+        <xsd:sequence>
+          <xsd:element name="Employee" maxOccurs="unbounded" minOccurs="0" type="xsdLocal1:Employee"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Employee">
+        <xsd:sequence>
+          <xsd:element name="EmploymentStatus" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="LoginName" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UAChallengeQuestion" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UARecertificacionFlg" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="GetChallengeQuestionOper_Input">
+    <part name="GetChallengeQuestionOper_Input" element="tns:GetChallengeQuestionOper_Input"/>
+  </message>
+  <message name="GetChallengeQuestionOper_Output">
+    <part name="GetChallengeQuestionOper_Output" element="tns:GetChallengeQuestionOper_Output"/>
+  </message>
+  <message name="UpdateEmployeeOper_Input">
+    <part name="UpdateEmployeeOper_Input" element="tns:UpdateEmployeeOper_Input"/>
+  </message>
+  <message name="UpdateEmployeeOper_Output">
+    <part name="UpdateEmployeeOper_Output" element="tns:UpdateEmployeeOper_Output"/>
+  </message>
+  <message name="SendNewPasswordOper_Input">
+    <part name="SendNewPasswordOper_Input" element="tns:SendNewPasswordOper_Input"/>
+  </message>
+  <message name="SendNewPasswordOper_Output">
+    <part name="SendNewPasswordOper_Output" element="tns:SendNewPasswordOper_Output"/>
+  </message>
+  <portType name="GetChallengeQuestionPort">
+    <operation name="GetChallengeQuestionOper">
+      <input message="tns:GetChallengeQuestionOper_Input"/>
+      <output message="tns:GetChallengeQuestionOper_Output"/>
+    </operation>
+  </portType>
+  <portType name="UpdateEmployeePort">
+    <operation name="UpdateEmployeeOper">
+      <input message="tns:UpdateEmployeeOper_Input"/>
+      <output message="tns:UpdateEmployeeOper_Output"/>
+    </operation>
+  </portType>
+  <portType name="SendNewPasswordPort">
+    <operation name="SendNewPasswordOper">
+      <input message="tns:SendNewPasswordOper_Input"/>
+      <output message="tns:SendNewPasswordOper_Output"/>
+    </operation>
+  </portType>
+  <binding name="GetChallengeQuestionPort" type="tns:GetChallengeQuestionPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="GetChallengeQuestionOper">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:GetChallengeQuestionOper"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="UpdateEmployeePort" type="tns:UpdateEmployeePort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="UpdateEmployeeOper">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:UpdateEmployeeOper"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="SendNewPasswordPort" type="tns:SendNewPasswordPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="SendNewPasswordOper">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:SendNewPasswordOper"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="UA_External_User_Administration_WS">
+    <port binding="tns:GetChallengeQuestionPort" name="GetChallengeQuestionPort">
+      <soap:address location="http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute"/>
+    </port>
+    <port binding="tns:UpdateEmployeePort" name="UpdateEmployeePort">
+      <soap:address location="http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute"/>
+    </port>
+    <port binding="tns:SendNewPasswordPort" name="SendNewPasswordPort">
+      <soap:address location="http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint></con:endpoints><con:operation id="f2e014f4-1dcc-45eb-833e-6902374e4a10" isOneWay="false" action="document/http://siebel.com/CustomUI:GetChallengeQuestionOper" name="GetChallengeQuestionOper" bindingOperationName="GetChallengeQuestionOper" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="33a47306-97f3-4579-bfea-e7d8a1d8fb56" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://siebel.com/CustomUI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cus:GetChallengeQuestionOper_Input>\r
+         <cus:LoginName>?</cus:LoginName>\r
+      </cus:GetChallengeQuestionOper_Input>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:GetChallengeQuestionOper"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="8797e707-bf94-44e0-b4be-9bc7b1f01b2f" wsaVersion="NONE" name="SendNewPasswordPort" type="wsdl" bindingName="{http://siebel.com/CustomUI}SendNewPasswordPort" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/martin.teper/OneDrive%20-%20Universal%20Assistance%20S.A/Documentos/Soap/http___siebel.com_CustomUI_UA_External_User_Administration_WS.WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint></con:endpoints><con:operation id="4b7da9ae-695b-43c0-902f-4ce4db315238" isOneWay="false" action="document/http://siebel.com/CustomUI:SendNewPasswordOper" name="SendNewPasswordOper" bindingOperationName="SendNewPasswordOper" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d483a077-206a-492f-94b1-786a74bbb889" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://siebel.com/CustomUI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cus:SendNewPasswordOper_Input>\r
+         <cus:ChallengeQuestion>?</cus:ChallengeQuestion>\r
+         <cus:LoginName>?</cus:LoginName>\r
+         <cus:Email>?</cus:Email>\r
+         <cus:ChallengeAnswer>?</cus:ChallengeAnswer>\r
+      </cus:SendNewPasswordOper_Input>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:SendNewPasswordOper"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="94542b2d-2cbe-4d0d-a996-eec2c45cda89" wsaVersion="NONE" name="UpdateEmployeePort" type="wsdl" bindingName="{http://siebel.com/CustomUI}UpdateEmployeePort" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/martin.teper/OneDrive%20-%20Universal%20Assistance%20S.A/Documentos/Soap/http___siebel.com_CustomUI_UA_External_User_Administration_WS.WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\martin.teper\OneDrive%20-%20Universal%20Assistance%20S.A\Documentos\Soap\http___siebel.com_CustomUI_UA_External_User_Administration_WS.WSDL"><con:part><con:url>file:\C:\Users\martin.teper\OneDrive%20-%20Universal%20Assistance%20S.A\Documentos\Soap\http___siebel.com_CustomUI_UA_External_User_Administration_WS.WSDL</con:url><con:content><![CDATA[<definitions targetNamespace="http://siebel.com/CustomUI" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsdLocal1="http://www.siebel.com/xml/UA%20Employee%20EAI%20IO" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsdLocal2="http://www.siebel.com/xml/UA%20Update%20Employee%20EAI%20IO" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://siebel.com/CustomUI">
+  <types>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://siebel.com/CustomUI">
+      <xsd:import namespace="http://www.siebel.com/xml/UA%20Update%20Employee%20EAI%20IO"/>
+      <xsd:import namespace="http://www.siebel.com/xml/UA%20Employee%20EAI%20IO"/>
+      <xsd:element name="GetChallengeQuestionOper_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="LoginName" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetChallengeQuestionOper_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string"/>
+            <xsd:element name="Error_spcMessage" type="xsd:string"/>
+            <xsd:element ref="xsdLocal1:ListOfUaEmployeeEaiIo"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateEmployeeOper_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="xsdLocal2:ListOfUaUpdateEmployeeEaiIo"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateEmployeeOper_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string"/>
+            <xsd:element name="Error_spcMessage" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendNewPasswordOper_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ChallengeQuestion" type="xsd:string"/>
+            <xsd:element name="LoginName" type="xsd:string"/>
+            <xsd:element name="Email" type="xsd:string"/>
+            <xsd:element name="ChallengeAnswer" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendNewPasswordOper_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Error_spcCode" type="xsd:string"/>
+            <xsd:element name="Error_spcMessage" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.siebel.com/xml/UA%20Update%20Employee%20EAI%20IO">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="ListOfUaUpdateEmployeeEaiIo" type="xsdLocal2:ListOfUaUpdateEmployeeEaiIo"/>
+      <xsd:complexType name="ListOfUaUpdateEmployeeEaiIoTopElmt">
+        <xsd:sequence>
+          <xsd:element name="ListOfUaUpdateEmployeeEaiIo" maxOccurs="1" minOccurs="1" type="xsdLocal2:ListOfUaUpdateEmployeeEaiIo"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOfUaUpdateEmployeeEaiIo">
+        <xsd:sequence>
+          <xsd:element name="Employee" maxOccurs="unbounded" minOccurs="0" type="xsdLocal2:Employee"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Employee">
+        <xsd:sequence>
+          <xsd:element name="EMailAddr" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="FirstName" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+          <xsd:element name="LastName" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+          <xsd:element name="LoginName" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Password" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UABirthDate" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UAChallengeAnswer" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UAChallengeQuestion" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UARecertificacionFlg" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="NewPassword" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.siebel.com/xml/UA%20Employee%20EAI%20IO">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="ListOfUaEmployeeEaiIo" type="xsdLocal1:ListOfUaEmployeeEaiIo"/>
+      <xsd:complexType name="ListOfUaEmployeeEaiIoTopElmt">
+        <xsd:sequence>
+          <xsd:element name="ListOfUaEmployeeEaiIo" maxOccurs="1" minOccurs="1" type="xsdLocal1:ListOfUaEmployeeEaiIo"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListOfUaEmployeeEaiIo">
+        <xsd:sequence>
+          <xsd:element name="Employee" maxOccurs="unbounded" minOccurs="0" type="xsdLocal1:Employee"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Employee">
+        <xsd:sequence>
+          <xsd:element name="EmploymentStatus" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="LoginName" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UAChallengeQuestion" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="UARecertificacionFlg" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="GetChallengeQuestionOper_Input">
+    <part name="GetChallengeQuestionOper_Input" element="tns:GetChallengeQuestionOper_Input"/>
+  </message>
+  <message name="GetChallengeQuestionOper_Output">
+    <part name="GetChallengeQuestionOper_Output" element="tns:GetChallengeQuestionOper_Output"/>
+  </message>
+  <message name="UpdateEmployeeOper_Input">
+    <part name="UpdateEmployeeOper_Input" element="tns:UpdateEmployeeOper_Input"/>
+  </message>
+  <message name="UpdateEmployeeOper_Output">
+    <part name="UpdateEmployeeOper_Output" element="tns:UpdateEmployeeOper_Output"/>
+  </message>
+  <message name="SendNewPasswordOper_Input">
+    <part name="SendNewPasswordOper_Input" element="tns:SendNewPasswordOper_Input"/>
+  </message>
+  <message name="SendNewPasswordOper_Output">
+    <part name="SendNewPasswordOper_Output" element="tns:SendNewPasswordOper_Output"/>
+  </message>
+  <portType name="GetChallengeQuestionPort">
+    <operation name="GetChallengeQuestionOper">
+      <input message="tns:GetChallengeQuestionOper_Input"/>
+      <output message="tns:GetChallengeQuestionOper_Output"/>
+    </operation>
+  </portType>
+  <portType name="UpdateEmployeePort">
+    <operation name="UpdateEmployeeOper">
+      <input message="tns:UpdateEmployeeOper_Input"/>
+      <output message="tns:UpdateEmployeeOper_Output"/>
+    </operation>
+  </portType>
+  <portType name="SendNewPasswordPort">
+    <operation name="SendNewPasswordOper">
+      <input message="tns:SendNewPasswordOper_Input"/>
+      <output message="tns:SendNewPasswordOper_Output"/>
+    </operation>
+  </portType>
+  <binding name="GetChallengeQuestionPort" type="tns:GetChallengeQuestionPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="GetChallengeQuestionOper">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:GetChallengeQuestionOper"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="UpdateEmployeePort" type="tns:UpdateEmployeePort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="UpdateEmployeeOper">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:UpdateEmployeeOper"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <binding name="SendNewPasswordPort" type="tns:SendNewPasswordPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="SendNewPasswordOper">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:SendNewPasswordOper"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="UA_External_User_Administration_WS">
+    <port binding="tns:GetChallengeQuestionPort" name="GetChallengeQuestionPort">
+      <soap:address location="http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute"/>
+    </port>
+    <port binding="tns:UpdateEmployeePort" name="UpdateEmployeePort">
+      <soap:address location="http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute"/>
+    </port>
+    <port binding="tns:SendNewPasswordPort" name="SendNewPasswordPort">
+      <soap:address location="http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://siebeldev.ua.com.ar:7400/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint><con:endpoint>https://vmqtsb78.ua.com.ar:8443/siebel/app/eai_anon/esn?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint></con:endpoints><con:operation id="e5d49385-891b-4d43-8fa0-9934f0d9b4d4" isOneWay="false" action="document/http://siebel.com/CustomUI:UpdateEmployeeOper" name="UpdateEmployeeOper" bindingOperationName="UpdateEmployeeOper" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="987af983-f983-488e-a8a3-4176229464ca" name="QA"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://vmqtsb78.ua.com.ar:8443/siebel/app/eai_anon/esn?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://siebel.com/CustomUI" xmlns:ua="http://www.siebel.com/xml/UA%20Update%20Employee%20EAI%20IO">\r
+   <soapEnv:Header xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/">
+<wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/07/secext">
+http://schemas.xmlsoap.org/ws/2002/07/secext
+<wsse:UsernameToken xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility">
+<wsse:Username>WSEMISIONWEBUA</wsse:Username>
+<wsse:Password Type="wsse:PasswordText">1234</wsse:Password>
+</wsse:UsernameToken>
+</wsse:Security>
+</soapEnv:Header>\r
+   <soapenv:Body>\r
+      <cus:UpdateEmployeeOper_Input>\r
+         <ua:ListOfUaUpdateEmployeeEaiIo>\r
+            <!--Zero or more repetitions:-->\r
+            <ua:Employee>\r
+               <!--Optional:-->\r
+               <ua:EMailAddr></ua:EMailAddr>\r
+               <ua:FirstName></ua:FirstName>\r
+               <ua:LastName></ua:LastName>\r
+               <!--Optional:-->\r
+               <ua:LoginName>ACAECER2</ua:LoginName>\r
+               <!--Optional:-->\r
+               <ua:Password></ua:Password>\r
+               <!--Optional:-->\r
+               <ua:UABirthDate></ua:UABirthDate>\r
+               <!--Optional:-->\r
+               <ua:UAChallengeAnswer></ua:UAChallengeAnswer>\r
+               <!--Optional:-->\r
+               <ua:UAChallengeQuestion></ua:UAChallengeQuestion>\r
+               <!--Optional:-->\r
+               <ua:UARecertificacionFlg>Y</ua:UARecertificacionFlg>\r
+               <!--Optional:-->\r
+               <ua:NewPassword>?</ua:NewPassword>\r
+            </ua:Employee>\r
+         </ua:ListOfUaUpdateEmployeeEaiIo>\r
+      </cus:UpdateEmployeeOper_Input>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:UpdateEmployeeOper"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
