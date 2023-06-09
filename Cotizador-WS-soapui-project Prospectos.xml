@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="UA_Lead_Cotizador_WS" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" id="04ed866f-c30f-4793-8927-ebf3b2bcc60b" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="LeadCotizadorPort" type="wsdl" bindingName="{http://siebel.com/CustomUI}LeadCotizadorPort" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/Jeremias/Desktop/Siglo21/Web%2520Service%2520Inbound" id="6efc223e-ab46-4228-8bc6-b148d8cd86ad" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\jeremias.boyanovsky\Desktop\Requerimiento\Web%20Service%20Inbound\UA_Lead_Cotizador_WS.WSDL"><con:part><con:url>file:\C:\Users\jeremias.boyanovsky\Desktop\Requerimiento\Web%20Service%20Inbound\UA_Lead_Cotizador_WS.WSDL</con:url><con:content><![CDATA[<definitions targetNamespace="http://siebel.com/CustomUI" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsdLocal1="http://www.siebel.com/xml/UALeadCotizadorReq" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsdLocal2="http://www.siebel.com/xml/UALeadCotizadorResp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://siebel.com/CustomUI">
+  <types>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://siebel.com/CustomUI">
+      <xsd:import namespace="http://www.siebel.com/xml/UALeadCotizadorResp"/>
+      <xsd:import namespace="http://www.siebel.com/xml/UALeadCotizadorReq"/>
+      <xsd:element name="LeadCotizadorOper_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="xsdLocal1:UALeadCotizadorReq"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="LeadCotizadorOper_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="xsdLocal2:UALeadCotizadorResp"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.siebel.com/xml/UALeadCotizadorReq">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="UALeadCotizadorReq" type="xsdLocal1:UALeadCotizadorReq"/>
+      <xsd:complexType name="UALeadCotizadorReqTopElmt">
+        <xsd:sequence>
+          <xsd:element name="UALeadCotizadorReq" maxOccurs="1" minOccurs="1" type="xsdLocal1:UALeadCotizadorReq"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UALeadCotizadorReq">
+        <xsd:sequence>
+          <xsd:element name="DatosLeadCotizadorIn" maxOccurs="1" minOccurs="1" type="xsdLocal1:DatosLeadCotizadorIn"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DatosLeadCotizadorIn">
+        <xsd:sequence>
+          <xsd:element name="IdLead" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="OrganizacionEmisora" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="CantCotizaciones" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Convenio" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Folleto" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="PaisOrigen" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Destino" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="TipoViaje" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="FechaInicio" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="FechaFin" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="CantidadPasajeros" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="PackFamiliar" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Edad1" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Edad2" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Edad3" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Edad4" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Edad5" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Edad6" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Edad7" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Edad8" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Edad9" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Edad10" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="ApellidoContacto" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="NombreContacto" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="TelefonoContacto" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="EmailContacto" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.siebel.com/xml/UALeadCotizadorResp">
+      <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="UALeadCotizadorResp" type="xsdLocal2:UALeadCotizadorResp"/>
+      <xsd:complexType name="UALeadCotizadorRespTopElmt">
+        <xsd:sequence>
+          <xsd:element name="UALeadCotizadorResp" maxOccurs="1" minOccurs="1" type="xsdLocal2:UALeadCotizadorResp"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UALeadCotizadorResp">
+        <xsd:sequence>
+          <xsd:element name="DatosLeadCotizadorOut" maxOccurs="unbounded" minOccurs="1" type="xsdLocal2:DatosLeadCotizadorOut"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DatosLeadCotizadorOut">
+        <xsd:sequence>
+          <xsd:element name="IdLeadOut" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="IdProducto" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Producto" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="PrecioEmision" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="PrecioEmisionLocal" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="PrecioBruto" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="PrecioBrutoLocal" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="PrecioUnitario" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="MonedaLista" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="MonedaLocal" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="ErrorCode" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="ErrorMsg" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="TipoCambio" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="PackFamiliar" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="FamiliaProducto" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="NombreProducto" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="CCGGESN" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="CCGGENU" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="CCGGPTB" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="CCPPESN" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="CCPPENU" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="CCPPPTB" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Atributo" maxOccurs="unbounded" minOccurs="1" type="xsdLocal2:Atributo"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Atributo">
+        <xsd:sequence>
+          <xsd:element name="Nombre" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="NombreVisible" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Unidad" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+          <xsd:element name="Valor" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="LeadCotizadorOper_Input">
+    <part name="LeadCotizadorOper_Input" element="tns:LeadCotizadorOper_Input"/>
+  </message>
+  <message name="LeadCotizadorOper_Output">
+    <part name="LeadCotizadorOper_Output" element="tns:LeadCotizadorOper_Output"/>
+  </message>
+  <portType name="LeadCotizadorPort">
+    <operation name="LeadCotizadorOper">
+      <input message="tns:LeadCotizadorOper_Input"/>
+      <output message="tns:LeadCotizadorOper_Output"/>
+    </operation>
+  </portType>
+  <binding name="LeadCotizadorPort" type="tns:LeadCotizadorPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="LeadCotizadorOper">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:LeadCotizadorOper"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="UA_spcLead_spcCotizador_spcWS">
+    <port binding="tns:LeadCotizadorPort" name="LeadCotizadorPort">
+      <soap:address location="http://190.111.217.138:7777/eai_anon_esn/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://endpoint.ua.com.ar/siebel/app/eai_anon/esn?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint><con:endpoint>https://vmdtsb76.ua.com.ar:8443/siebel/app/eai_anon/esn?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint><con:endpoint>https://vmdtsb76.ua.com.ar:8443/siebel/app/eai_anon/esn?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute&amp;Workspace=dev_mteper_telefono_prospecto</con:endpoint><con:endpoint>https://vmqtsb78.ua.com.ar:8443/siebel/app/eai_anon/esn?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint></con:endpoints><con:operation isOneWay="false" action="document/http://siebel.com/CustomUI:LeadCotizadorOper" name="LeadCotizadorOper" bindingOperationName="LeadCotizadorOper" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="6608b722-2ea0-415c-8202-9b4c4848ebb3"><con:settings/><con:call id="88200620-08b1-4e3c-8dba-4beaf9c1aedd" name="DEV"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://vmdtsb76.ua.com.ar:8443/siebel/app/eai_anon/esn?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute&amp;Workspace=dev_mteper_telefono_prospecto</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://siebel.com/CustomUI" xmlns:ual="http://www.siebel.com/xml/UALeadCotizadorReq">
+<soapEnv:Header xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/">
+<wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/07/secext">
+http://schemas.xmlsoap.org/ws/2002/07/secext
+<wsse:UsernameToken xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility">
+<wsse:Username>MTEPER</wsse:Username>
+<wsse:Password Type="wsse:PasswordText">MTEPER1</wsse:Password>
+</wsse:UsernameToken>
+</wsse:Security>
+</soapEnv:Header>
+   <soapenv:Body>
+      <cus:LeadCotizadorOper_Input>
+         <ual:UALeadCotizadorReq>
+            <ual:DatosLeadCotizadorIn>
+               <ual:IdLead></ual:IdLead>
+               <ual:OrganizacionEmisora>1-213YV</ual:OrganizacionEmisora>
+               <ual:CantCotizaciones>1</ual:CantCotizaciones>
+               <ual:Convenio>1-1ZY6K5</ual:Convenio>
+               <ual:Folleto></ual:Folleto>
+               <ual:PaisOrigen>ARGENTINA</ual:PaisOrigen>
+               <ual:Destino>Europa</ual:Destino>
+               <ual:TipoViaje>Un viaje</ual:TipoViaje>
+               <ual:FechaInicio>12/09/2023</ual:FechaInicio>
+               <ual:FechaFin>12/09/2023</ual:FechaFin>
+               <ual:CantidadPasajeros>1</ual:CantidadPasajeros>
+               <ual:PackFamiliar></ual:PackFamiliar>
+               <ual:Edad1>30</ual:Edad1>
+               <ual:Edad2></ual:Edad2>
+               <ual:Edad3></ual:Edad3>
+               <ual:Edad4></ual:Edad4>
+               <ual:Edad5></ual:Edad5>
+               <ual:Edad6></ual:Edad6>
+               <ual:Edad7></ual:Edad7>
+               <ual:Edad8></ual:Edad8>
+               <ual:Edad9></ual:Edad9>
+               <ual:Edad10></ual:Edad10>
+               <ual:ApellidoContacto>-</ual:ApellidoContacto>
+               <ual:NombreContacto>-</ual:NombreContacto>
+               <ual:TelefonoContacto>57 1 4749595</ual:TelefonoContacto>
+               <ual:EmailContacto>sistemas1@juantoselli.com</ual:EmailContacto>
+               <ual:Renovables>N</ual:Renovables>
+            </ual:DatosLeadCotizadorIn>
+         </ual:UALeadCotizadorReq>
+      </cus:LeadCotizadorOper_Input>
+   </soapenv:Body>
+</soapenv:Envelope> 
+
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:LeadCotizadorOper"/><con:wsrmConfig version="1.2"/></con:call><con:call id="2970eabe-d2d4-41b8-af73-8f3abc952567" name="QA"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://vmqtsb78.ua.com.ar:8443/siebel/app/eai_anon/esn?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://siebel.com/CustomUI" xmlns:ual="http://www.siebel.com/xml/UALeadCotizadorReq">
+<soapEnv:Header xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/">
+<wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/07/secext">
+http://schemas.xmlsoap.org/ws/2002/07/secext
+<wsse:UsernameToken xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility">
+<wsse:Username>SADMIN</wsse:Username>
+<wsse:Password Type="wsse:PasswordText">SADMIN</wsse:Password>
+</wsse:UsernameToken>
+</wsse:Security>
+</soapEnv:Header>
+   <soapenv:Body>
+      <cus:LeadCotizadorOper_Input>
+         <ual:UALeadCotizadorReq>
+            <ual:DatosLeadCotizadorIn>
+               <ual:IdLead></ual:IdLead>
+               <ual:OrganizacionEmisora>1-33R4V9</ual:OrganizacionEmisora>
+               <ual:CantCotizaciones>1</ual:CantCotizaciones>
+               <!--1-8SSVE3-->
+               <ual:Convenio></ual:Convenio>
+               <ual:Folleto></ual:Folleto>
+               <ual:PaisOrigen>ARGENTINA</ual:PaisOrigen>
+               <ual:Destino>Europa</ual:Destino>
+               <ual:TipoViaje>Un viaje</ual:TipoViaje>
+               <ual:FechaInicio>12/09/2023</ual:FechaInicio>
+               <ual:FechaFin>12/09/2023</ual:FechaFin>
+               <ual:CantidadPasajeros>1</ual:CantidadPasajeros>
+               <ual:PackFamiliar></ual:PackFamiliar>
+               <ual:Edad1>30</ual:Edad1>
+               <ual:Edad2></ual:Edad2>
+               <ual:Edad3></ual:Edad3>
+               <ual:Edad4></ual:Edad4>
+               <ual:Edad5></ual:Edad5>
+               <ual:Edad6></ual:Edad6>
+               <ual:Edad7></ual:Edad7>
+               <ual:Edad8></ual:Edad8>
+               <ual:Edad9></ual:Edad9>
+               <ual:Edad10></ual:Edad10>
+               <ual:ApellidoContacto></ual:ApellidoContacto>
+               <ual:NombreContacto></ual:NombreContacto>
+               <ual:TelefonoContacto></ual:TelefonoContacto>
+               <ual:EmailContacto>mimail2@mail.com</ual:EmailContacto>
+               <ual:Renovables>N</ual:Renovables>
+               <ual:ValidaEdades>N</ual:ValidaEdades>
+               <ual:ValidaTipoViaje></ual:ValidaTipoViaje>
+              <ual:CrearLead>Y</ual:CrearLead>
+
+            </ual:DatosLeadCotizadorIn>
+         </ual:UALeadCotizadorReq>
+      </cus:LeadCotizadorOper_Input>
+   </soapenv:Body>
+</soapenv:Envelope> 
+
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:LeadCotizadorOper"/><con:wsrmConfig version="1.2"/></con:call><con:call id="02f9c808-2744-418c-acd1-15bcb1710a9f" name="PROD viajes exito"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://endpoint.ua.com.ar/siebel/app/eai_anon/esn?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://siebel.com/CustomUI" xmlns:ual="http://www.siebel.com/xml/UALeadCotizadorReq">
+<soapEnv:Header xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/">
+<wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/07/secext">
+http://schemas.xmlsoap.org/ws/2002/07/secext
+<wsse:UsernameToken xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility">
+<wsse:Username>MARTIN.TEPER</wsse:Username>
+<wsse:Password Type="wsse:PasswordText">MTEPER1</wsse:Password>
+</wsse:UsernameToken>
+</wsse:Security>
+</soapEnv:Header>
+   <soapenv:Body>
+      <cus:LeadCotizadorOper_Input>
+         <ual:UALeadCotizadorReq>
+            <ual:DatosLeadCotizadorIn>
+               <ual:IdLead></ual:IdLead>
+               <ual:OrganizacionEmisora>1-CV0Z3A5</ual:OrganizacionEmisora>
+               <ual:CantCotizaciones>1</ual:CantCotizaciones>
+               <ual:Convenio>1-CVT5HRB</ual:Convenio>
+               <ual:Folleto></ual:Folleto>
+               <ual:PaisOrigen>COLOMBIA</ual:PaisOrigen>
+               <ual:Destino>Internacional Mundo</ual:Destino>
+               <ual:TipoViaje>Un viaje</ual:TipoViaje>
+               <ual:FechaInicio>01/18/2023</ual:FechaInicio>
+               <ual:FechaFin>01/21/2023</ual:FechaFin>
+               <ual:CantidadPasajeros>1</ual:CantidadPasajeros>
+               <ual:PackFamiliar></ual:PackFamiliar>
+               <ual:Edad1>78</ual:Edad1>
+               <ual:Edad2></ual:Edad2>
+               <ual:Edad3></ual:Edad3>
+               <ual:Edad4></ual:Edad4>
+               <ual:Edad5></ual:Edad5>
+               <ual:Edad6></ual:Edad6>
+               <ual:Edad7></ual:Edad7>
+               <ual:Edad8></ual:Edad8>
+               <ual:Edad9></ual:Edad9>
+               <ual:Edad10></ual:Edad10>
+               <ual:ApellidoContacto>71 - 85</ual:ApellidoContacto>
+               <ual:NombreContacto>Cotizacion</ual:NombreContacto>
+               <ual:TelefonoContacto>+57 1 4749595</ual:TelefonoContacto>
+               <ual:EmailContacto>integrations@netactica.com</ual:EmailContacto>
+               <ual:Renovables></ual:Renovables>
+            </ual:DatosLeadCotizadorIn>
+         </ual:UALeadCotizadorReq>
+      </cus:LeadCotizadorOper_Input>
+   </soapenv:Body>
+</soapenv:Envelope> 
+
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:LeadCotizadorOper"/><con:wsrmConfig version="1.2"/></con:call><con:call id="4e96eb5c-02b3-4cee-9e80-e58251dbf0e8" name="PROD"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://vmqtsb78.ua.com.ar:8443/siebel/app/eai_anon/esn?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cus="http://siebel.com/CustomUI" xmlns:ual="http://www.siebel.com/xml/UALeadCotizadorReq">
+<soapEnv:Header xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/">
+<wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/07/secext">
+http://schemas.xmlsoap.org/ws/2002/07/secext
+<wsse:UsernameToken xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility">
+<wsse:Username>MARTIN.TEPER</wsse:Username>
+<wsse:Password Type="wsse:PasswordText">MTEPER1</wsse:Password>
+</wsse:UsernameToken>
+</wsse:Security>
+</soapEnv:Header>
+   <soapenv:Body>
+      <cus:LeadCotizadorOper_Input>
+         <ual:UALeadCotizadorReq>
+            <ual:DatosLeadCotizadorIn>
+               <ual:IdLead></ual:IdLead>
+               <ual:OrganizacionEmisora>1-CV0Z3A5</ual:OrganizacionEmisora>
+               <ual:CantCotizaciones>1</ual:CantCotizaciones>
+               <ual:Convenio>1-CVT5HRB</ual:Convenio>
+               <ual:Folleto></ual:Folleto>
+               <ual:PaisOrigen>COLOMBIA</ual:PaisOrigen>
+               <ual:Destino>Internacional Mundo</ual:Destino>
+               <ual:TipoViaje>Un viaje</ual:TipoViaje>
+               <ual:FechaInicio>01/18/2023</ual:FechaInicio>
+               <ual:FechaFin>01/21/2023</ual:FechaFin>
+               <ual:CantidadPasajeros>1</ual:CantidadPasajeros>
+               <ual:PackFamiliar></ual:PackFamiliar>
+               <ual:Edad1>78</ual:Edad1>
+               <ual:Edad2></ual:Edad2>
+               <ual:Edad3></ual:Edad3>
+               <ual:Edad4></ual:Edad4>
+               <ual:Edad5></ual:Edad5>
+               <ual:Edad6></ual:Edad6>
+               <ual:Edad7></ual:Edad7>
+               <ual:Edad8></ual:Edad8>
+               <ual:Edad9></ual:Edad9>
+               <ual:Edad10></ual:Edad10>
+               <ual:ApellidoContacto>71 - 85</ual:ApellidoContacto>
+               <ual:NombreContacto>Cotizacion</ual:NombreContacto>
+               <ual:TelefonoContacto>+57 1 4749595</ual:TelefonoContacto>
+               <ual:EmailContacto>integrations@netactica.com</ual:EmailContacto>
+               <ual:Renovables></ual:Renovables>
+            </ual:DatosLeadCotizadorIn>
+         </ual:UALeadCotizadorReq>
+      </cus:LeadCotizadorOper_Input>
+   </soapenv:Body>
+</soapenv:Envelope> 
+
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="document/http://siebel.com/CustomUI:LeadCotizadorOper"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
